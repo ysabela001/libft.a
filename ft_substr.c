@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ytavares <ytavares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/16 14:35:51 by ytavares          #+#    #+#             */
-/*   Updated: 2024/10/25 14:09:20 by ytavares         ###   ########.fr       */
+/*   Created: 2024/10/25 15:54:32 by ytavares          #+#    #+#             */
+/*   Updated: 2024/10/25 17:18:25 by ytavares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	unsigned char	*d;
-	unsigned char	*s;
-	size_t			a;
+	size_t	len_s;
+	int		i;
+	char	*ptr;
 
-	s = (unsigned char *)src;
-	d = (unsigned char *)dest;
-	a = 0;
-	while (a < n)
+	len_s = 0;
+	i = 0;
+	if (*s == '\0')
+		return (NULL);
+	len_s = ft_strlen(s);
+	while (s[i] != '\0')
 	{
-		d[a] = s[a];
-		a++;
+		if (s[i] == start)
+		{
+			ptr = (s[i])
+		}
 	}
-	return (dest);
 }
