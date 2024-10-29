@@ -6,7 +6,7 @@
 /*   By: ytavares <ytavares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 16:35:55 by ytavares          #+#    #+#             */
-/*   Updated: 2024/10/24 20:08:51 by ytavares         ###   ########.fr       */
+/*   Updated: 2024/10/29 19:58:52 by ytavares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strrchr(const char *s, int c)
 	char	*last;
 
 	last = NULL;
-	while (*s != '\0')
+	while (*s)
 	{
 		if (*s == (char)c)
 		{
@@ -25,7 +25,7 @@ char	*ft_strrchr(const char *s, int c)
 		}
 		s++;
 	}
-	if (c == '\0')
+	if (*s == (char)c)
 	{
 		return ((char *)s);
 	}

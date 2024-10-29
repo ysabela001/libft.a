@@ -6,7 +6,7 @@
 /*   By: ytavares <ytavares@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 15:44:16 by ytavares          #+#    #+#             */
-/*   Updated: 2024/10/22 14:25:46 by ytavares         ###   ########.fr       */
+/*   Updated: 2024/10/29 19:36:07 by ytavares         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	d = (unsigned char *)dest;
 	s = (unsigned char *)src;
+	if (d == NULL && s == NULL)
+		return (NULL);
 	if (d < s)
 	{
 		while (n--)
